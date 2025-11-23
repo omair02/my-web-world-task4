@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to My Web World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Web World 🌐</h1>
+    <p>Exploring HTML, CSS, and JavaScript Projects</p>
+  </header>
+
+  <main class="container">
+    <!-- Task 1: Intro -->
+    <section class="intro">
+      <h2>About This Page</h2>
+      <p>
+        This project combines HTML, CSS, and JavaScript skills across multiple internship tasks.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+        alt="Web Development"
+        class="intro-img"
+      />
+      <p>
+        Learn more about web development on
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn"
+          target="_blank"
+          >MDN Web Docs</a
+        >.
+      </p>
+    </section>
+
+    <!-- Task 1: JS Interaction -->
+    <section class="interaction">
+      <h2>Click the Button Below</h2>
+      <button onclick="showMessage()">Click Me</button>
+      <p id="afterClick" style="margin-top: 15px; color: #1976d2; font-weight: 500"></p>
+    </section>
+
+    <!-- Task 2: Contact Form -->
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="example@email.com" />
+          </div>
+        </div>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="4" placeholder="Write something..."></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p id="formStatus" class="status-msg"></p>
+      </form>
+    </section>
+
+    <!-- Task 3: Weather API Fetch -->
+    <section class="api-section">
+      <h2>Check Current Weather ☀️</h2>
+      <p>Enter a city name and get real-time weather information.</p>
+
+      <div class="weather-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name (e.g., Delhi)"
+        />
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherContainer" class="joke-box"></div>
+      </div>
+    </section>
+
+    <!-- ===================== TASK 4 START (ADDED) ===================== -->
+
+    <!-- Task 4: Portfolio Section (From PDF: About / Projects / Contact) -->
+    <section class="portfolio">
+      <h2>My Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="card">
+          <h3>About Me</h3>
+          <p>I am <strong>Muhammad Omair</strong>, learning Web Development (HTML, CSS, JavaScript).</p>
+        </div>
+
+        <div class="card">
+          <h3>Projects</h3>
+          <ul>
+            <li>Weather App (Task 3)</li>
+            <li>Contact Form + Validation (Task 2)</li>
+            <li>Interactive Projects (Task 1)</li>
+            <li>To-Do App & Product Page (Task 4)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Email: <em>omair4u2004@gmail.com</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 4: To-Do App (LocalStorage) -->
+    <section class="todo-section">
+      <h2>To-Do List (Saved in Browser)</h2>
+
+      <div class="todo-box">
+        <input type="text" id="todoInput" placeholder="Add a task..." />
+        <button onclick="addTask()">Add</button>
+      </div>
+
+      <ul id="todoList"></ul>
+    </section>
+
+    <!-- Task 4: Product Listing (Filter + Sort) -->
+    <section class="products">
+      <h2>Product Listing</h2>
+
+      <div class="filter-controls">
+        <select id="categoryFilter" onchange="applyFilters()">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="clothes">Clothes</option>
+        </select>
+
+        <select id="sortFilter" onchange="applyFilters()">
+          <option value="none">Sort</option>
+          <option value="low-high">Price: Low → High</option>
+          <option value="high-low">Price: High → Low</option>
+        </select>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <!-- ===================== TASK 4 END ===================== -->
+
+  </main>
+
+  <footer>
+    <p>Created by <strong>Muhammad Omair</strong> | © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
